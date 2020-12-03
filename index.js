@@ -12,6 +12,8 @@ app.set('branch', process.env.DEFAULT_BRANCH || 'master');
 app.set('debug', process.env.NODE_ENV === 'development');
 app.set('port', process.env.PORT || 3000);
 app.set('name', pack.name);
+app.set('gogsUsername', process.env.GOGS_USERNAME || '');
+app.set('gogsPassword', process.env.GOGS_PASSWORD || '');
 app.set('secret', process.env.WEBHOOK_SECRET || '');
 
 app.use(bodyParser.json());
