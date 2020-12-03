@@ -22,6 +22,7 @@ app.post('/gogs/', (req, res) =>{
   if(crane.validate(app, req, res)) return;
   
   var url = crane.url.gogs(app, req);
+  console.log("Received request...");
   return crane.deploy(app, url, req, res);
 });
 
